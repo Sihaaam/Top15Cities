@@ -1,0 +1,58 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+/*Index.html*/
+.jumbotron {
+    text-align: center;
+    color: white;
+    margin: 0 auto;
+    padding: 20px;
+    background-image: url(/Content/images/city.jpg);
+    height: 350px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#city-card-img {
+    width: 35rem;
+    height: 220px;
+}
+
+.card {
+    height: 100%;
+    text-align: center;
+    width: 35rem;
+    background-color: white;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+}
+
+.card-title {
+    font-weight: bold;
+}
+
+/*_Layout.cshtml*/
+/*I want a centered alignment for the text within the navbar!!*/

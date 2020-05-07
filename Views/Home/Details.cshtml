@@ -1,0 +1,33 @@
+﻿@model Top15Cities.Models.City
+
+@{
+    ViewBag.Title = "Details";
+}
+
+    
+<h2>Details about @Html.DisplayFor(model => model.CityName)</h2>
+<div>
+    <hr />
+    <div class="row" align="center">
+        <div class="col-md-4">
+            <div style="padding: 10px">
+                @Html.DisplayFor(model => model.CityInformation)
+            </div>
+            @*<dl class="dl-horizontal">
+            <dt>
+                Some information:
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.CityInformation)
+            </dd>
+        </dl>*@
+        </div>
+        <div class="col-md-4">
+            <img src="@Html.DisplayFor(model => model.PathPhoto)" style="width: 500px; height: 300px; margin-left: 200px;"/>
+        </div>
+    </div>
+</div>
+<br />
+<p>
+    @Html.ActionLink("Back to Top 15 cities", "Index")
+</p>

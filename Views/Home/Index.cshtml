@@ -1,0 +1,38 @@
+﻿@model IEnumerable<Top15Cities.Models.City>
+
+@{
+    ViewBag.Title = "Index";
+}
+<div class="jumbotron">
+    <h1>Top 15 cities to visit in the world</h1>
+    <p class="lead">We have listed the top 15 cities to visit in the world. Let's get started!</p>
+</div>
+<br />
+
+<div class="row">
+    @foreach (var item in Model)
+    {
+
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body">
+                    <img src="@Html.DisplayFor(modelItem => item.PathPhoto)" id="city-card-img" />
+                    @*<img src="~/Content/images/@Html.DisplayFor(modelItem => item.CityName)}.jpg" id="city-card-img" alt="...">*@
+                    <h3 class="card-title">@Html.DisplayFor(modelItem => item.CityId) @Html.DisplayFor(modelItem => item.CityName)</h3>
+                    <p class="card-text">@Html.DisplayFor(modelItem => item.CityInformation)</p>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">
+                        @Html.ActionLink("Details", "Details", new { id = item.CityId })
+                    </li>
+                    @if (Session["UserName"] != null)
+                    {
+                        <li class="list-group-item">
+                            @Html.ActionLink("Add to wishlist", "WishList", "Home")
+                        </li>
+                    }
+                </ul>
+            </div>
+        </div>
+    }
+</div>
